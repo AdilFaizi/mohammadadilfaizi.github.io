@@ -163,7 +163,7 @@ h1, h2, h3, h4 {
 /* ---- Sections general ---- */
 section {
   padding: 6rem 2.5rem;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -239,7 +239,7 @@ section > h2 {
 
 .hero-name {
   display: block;
-  font-size: clamp(4rem, 12vw, 9rem);
+  font-size: clamp(2.5rem, 10vw, 9rem);
   font-weight: 800;
   line-height: 0.95;
   margin-bottom: 1.5rem;
