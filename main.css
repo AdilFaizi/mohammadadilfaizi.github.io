@@ -163,10 +163,15 @@ h1, h2, h3, h4 {
 /* ---- Sections general ---- */
 section {
   padding: 6rem 2.5rem;
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
+section > h2,
+section > p,
+section > .section-label {
+  max-width: 600px;
+}
 .section-label {
   font-size: 0.72rem;
   color: var(--accent);
