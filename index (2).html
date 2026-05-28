@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adil Faizi — ePortfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="nav-initials">AF</span>
+      <span class="nav-slash">/portfolio</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#artifacts">Artifacts</a></li>
+      <li><a href="#reflections">Reflections</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+    <button class="nav-menu-btn" id="menuToggle" aria-label="Menu">☰</button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="menuClose">✕</button>
+    <ul>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#goals" class="mob-link">Goals</a></li>
+      <li><a href="#artifacts" class="mob-link">Artifacts</a></li>
+      <li><a href="#reflections" class="mob-link">Reflections</a></li>
+      <li><a href="#connect" class="mob-link">Connect</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="hero-tag">
+        <span class="dot"></span> ePortfolio — COOP 2100 · Academic &amp; Professional Development
+      </div>
+      <h1 class="hero-name">
+        <span class="hero-first reveal-up">Adil</span>
+        <span class="hero-last reveal-up delay-1">Faizi</span>
+      </h1>
+      <p class="hero-roles reveal-up delay-2">
+        <span class="mono">&gt;</span> Student · Learner · Future Professional
+      </p>
+      <p class="hero-bio reveal-up delay-3">
+        Coming soon...
+      </p>
+      <div class="hero-btns reveal-up delay-4">
+        <a href="#artifacts" class="btn-primary">View Artifacts →</a>
+        <a href="#reflections" class="btn-ghost">Read Reflections</a>
+      </div>
+      <div class="scroll-hint">SCROLL</div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <div class="section-label mono">01 — About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>My Story</h2>
+          <p class="coming-soon">Coming soon...</p>
+        </div>
+        <div class="about-cards">
+          <div class="info-card">
+            <h3>Academic Focus</h3>
+            <p class="coming-soon">Coming soon...</p>
+          </div>
+          <div class="info-card">
+            <h3>Personal Growth</h3>
+            <p class="coming-soon">Coming soon...</p>
+          </div>
+          <div class="info-card">
+            <h3>Professional Brand</h3>
+            <p class="coming-soon">Coming soon...</p>
+          </div>
+          <div class="info-card">
+            <h3>Connected Learning</h3>
+            <p class="coming-soon">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GOALS ===== -->
+    <section id="goals">
+      <div class="section-label mono">02 — Goals &amp; Standards</div>
+      <h2>Learning Outcomes</h2>
+      <p class="section-sub">The following learning outcomes from COOP 2100 guide the purpose and content of this portfolio.</p>
+
+      <div class="goals-grid">
+        <div class="goal-item">
+          <span class="goal-num mono">LO 01</span>
+          <h3>Purpose &amp; Value of ePortfolios</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="goal-tag">Foundational</div>
+        </div>
+        <div class="goal-item">
+          <span class="goal-num mono">LO 02</span>
+          <h3>Portfolio Elements</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="goal-tag">Conceptual</div>
+        </div>
+        <div class="goal-item">
+          <span class="goal-num mono">LO 03</span>
+          <h3>COOP 2100 Orientation</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="goal-tag">Course-Specific</div>
+        </div>
+        <div class="goal-item">
+          <span class="goal-num mono">LO 04</span>
+          <h3>ePortfolio Shell</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="goal-tag">Applied</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ARTIFACTS ===== -->
+    <section id="artifacts">
+      <div class="section-label mono">03 — Artifacts</div>
+      <h2>Selected Work</h2>
+      <p class="section-sub">Artifacts will be added here throughout the course.</p>
+
+      <div class="artifact-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="academic">Academic</button>
+        <button class="filter-btn" data-filter="project">Projects</button>
+        <button class="filter-btn" data-filter="extracurricular">Extracurricular</button>
+      </div>
+
+      <div class="artifacts-grid">
+
+        <div class="artifact-card placeholder-card" data-category="academic">
+          <div class="artifact-header">
+            <span class="artifact-type mono">Academic</span>
+            <span class="artifact-date mono">——</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="artifact-tags">
+            <span class="tag">——</span>
+          </div>
+          <div class="artifact-footer">
+            <span class="artifact-standard mono">Standard: ——</span>
+          </div>
+        </div>
+
+        <div class="artifact-card placeholder-card" data-category="project">
+          <div class="artifact-header">
+            <span class="artifact-type mono">Project</span>
+            <span class="artifact-date mono">——</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="artifact-tags">
+            <span class="tag">——</span>
+          </div>
+          <div class="artifact-footer">
+            <span class="artifact-standard mono">Standard: ——</span>
+          </div>
+        </div>
+
+        <div class="artifact-card placeholder-card" data-category="extracurricular">
+          <div class="artifact-header">
+            <span class="artifact-type mono">Extracurricular</span>
+            <span class="artifact-date mono">——</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="artifact-tags">
+            <span class="tag">——</span>
+          </div>
+          <div class="artifact-footer">
+            <span class="artifact-standard mono">Standard: ——</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== REFLECTIONS ===== -->
+    <section id="reflections">
+      <div class="section-label mono">04 — Reflections</div>
+      <h2>Looking Inward</h2>
+      <p class="section-sub">Reflections will be added here throughout the course.</p>
+
+      <div class="reflections-list">
+
+        <div class="reflection-item placeholder-reflection">
+          <div class="reflection-meta">
+            <span class="mono reflection-num">R.01</span>
+            <span class="reflection-date mono">Coming soon...</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <div class="reflection-body">
+            <p class="coming-soon">Coming soon...</p>
+          </div>
+        </div>
+
+        <div class="reflection-item placeholder-reflection">
+          <div class="reflection-meta">
+            <span class="mono reflection-num">R.02</span>
+            <span class="reflection-date mono">Coming soon...</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <div class="reflection-body">
+            <p class="coming-soon">Coming soon...</p>
+          </div>
+        </div>
+
+        <div class="reflection-item placeholder-reflection">
+          <div class="reflection-meta">
+            <span class="mono reflection-num">R.03</span>
+            <span class="reflection-date mono">Coming soon...</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <div class="reflection-body">
+            <p class="coming-soon">Coming soon...</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+      <div class="section-label mono">05 — Skills &amp; Competencies</div>
+      <h2>What I Bring</h2>
+      <p class="section-sub">Coming soon...</p>
+
+      <div class="skills-grid">
+        <div class="skill-area">
+          <h3>Academic Skills</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Critical Thinking</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Research &amp; Analysis</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Written Communication</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Oral Presentation</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+          </ul>
+        </div>
+        <div class="skill-area">
+          <h3>Professional Skills</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Teamwork &amp; Collaboration</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Time Management</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Problem Solving</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Adaptability</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+          </ul>
+        </div>
+        <div class="skill-area">
+          <h3>Personal Strengths</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Self-Motivation</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Curiosity &amp; Learning</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Empathy</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Initiative</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONNECT ===== -->
+    <section id="connect">
+      <div class="section-label mono">06 — Connect</div>
+      <h2>Get In Touch</h2>
+      <div class="social-links">
+        <a href="#" class="social-btn">LinkedIn</a>
+        <a href="#" class="social-btn">Email</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-name mono">Adil Faizi — ePortfolio · COOP 2100</p>
+      <p class="footer-quote">"A portfolio is the story of knowing."</p>
+      <p class="footer-credit">In progress · <span class="mono">2024–2025</span></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
