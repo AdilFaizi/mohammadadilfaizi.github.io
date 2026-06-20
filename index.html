@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adil Faizi, my ePortfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
+  <style>
+    /* ── Dropdown nav additions ── */
+    .nav-links { list-style: none; display: flex; gap: 0; align-items: center; }
+    .nav-links > li { position: relative; }
+    .nav-links > li > a,
+    .nav-links > li > .nav-parent {
+      display: flex; align-items: center; gap: 4px;
+      padding: 8px 14px; font-size: 0.82rem; letter-spacing: 0.06em;
+      text-decoration: none; color: inherit; cursor: pointer;
+      white-space: nowrap; background: none; border: none; font-family: inherit;
+      transition: opacity 0.2s;
+    }
+    .nav-links > li > a:hover,
+    .nav-links > li > .nav-parent:hover { opacity: 0.6; }
+    .nav-parent .caret { font-size: 0.6rem; transition: transform 0.25s; }
+    .nav-links > li:hover .caret { transform: rotate(180deg); }
+
+    /* Dropdown panel */
+    .dropdown {
+      position: absolute; top: calc(100% + 8px); left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      background: #0a0a0a; border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px; padding: 8px 0; min-width: 170px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 200;
+    }
+    .nav-links > li:hover .dropdown {
+      opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+    }
+    .dropdown a {
+      display: block; padding: 9px 18px; font-size: 0.78rem;
+      letter-spacing: 0.05em; text-decoration: none; color: rgba(255,255,255,0.65);
+      transition: color 0.15s, background 0.15s;
+      white-space: nowrap;
+    }
+    .dropdown a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+    .dropdown-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 4px 0; }
+
+    /* Mobile menu additions */
+    .mob-group { margin-bottom: 6px; }
+    .mob-group-label {
+      font-family: 'DM Mono', monospace; font-size: 0.7rem;
+      letter-spacing: 0.1em; color: rgba(255,255,255,0.35);
+      padding: 10px 24px 4px; text-transform: uppercase;
+    }
+    .mob-sub-link {
+      display: block; padding: 9px 24px 9px 36px; font-size: 1rem;
+      color: rgba(255,255,255,0.6); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .mob-sub-link:hover { color: #fff; }
+    .mob-link { display: block; padding: 12px 24px; font-size: 1.1rem;
+      color: #fff; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="nav-initials">AF</span>
+      <span class="nav-slash">/portfolio</span>
+    </div>
+    <ul class="nav-links">
+
+      <li><a href="#home">Home</a></li>
+
+      <li><a href="#about">About Me</a></li>
+
+      <!-- Career dropdown -->
+      <li>
+        <button class="nav-parent">Career <span class="caret">▼</span></button>
+        <div class="dropdown">
+          <a href="#education">Education</a>
+          <a href="#resume">Resume</a>
+          <a href="#experience">Experience</a>
+          <a href="#community">Community</a>
+        </div>
+      </li>
+
+      <!-- Discover Myself dropdown -->
+      <li>
+        <button class="nav-parent">Discover Myself <span class="caret">▼</span></button>
+        <div class="dropdown">
+          <a href="#dreams">Dreams &amp; Goals</a>
+          <a href="#interests">Interests &amp; Skills</a>
+          <a href="#values">Values &amp; Personality</a>
+        </div>
+      </li>
+
+      <li><a href="#projects">Projects &amp; Credentials</a></li>
+      <li><a href="#reflections">Reflections</a></li>
+
+    </ul>
+    <button class="nav-menu-btn" id="menuToggle" aria-label="Menu">☰</button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="menuClose">✕</button>
+    <ul>
+      <li><a href="#home" class="mob-link">Home</a></li>
+      <li><a href="#about" class="mob-link">About Me</a></li>
+
+      <li class="mob-group">
+        <div class="mob-group-label">Career</div>
+        <a href="#education" class="mob-sub-link">Education</a>
+        <a href="#resume" class="mob-sub-link">Resume</a>
+        <a href="#experience" class="mob-sub-link">Experience</a>
+        <a href="#community" class="mob-sub-link">Community</a>
+      </li>
+
+      <li class="mob-group">
+        <div class="mob-group-label">Discover Myself</div>
+        <a href="#dreams" class="mob-sub-link">Dreams &amp; Goals</a>
+        <a href="#interests" class="mob-sub-link">Interests &amp; Skills</a>
+        <a href="#values" class="mob-sub-link">Values &amp; Personality</a>
+      </li>
+
+      <li><a href="#projects" class="mob-link">Projects &amp; Credentials</a></li>
+      <li><a href="#reflections" class="mob-link">Reflections</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO / HOME ===== -->
+    <section id="home">
+      <div class="hero-tag">
+        <span class="dot"></span> ePortfolio — COOP 2100 · Academic &amp; Professional Development
+      </div>
+      <h1 class="hero-name">
+        <span class="hero-first reveal-up">Adil</span>
+        <span class="hero-last reveal-up delay-1">Faizi</span>
+      </h1>
+      <p class="hero-roles reveal-up delay-2">
+        <span class="mono">&gt;</span> Electrical Engineering Student @ York University 
+      </p>
+      <p class="hero-bio reveal-up delay-3">
+        Welcome to my ePortfolio. This portfolio showcases my academic journey, professional experiences, technical projects, and personal development as an Electrical Engineering student. Through coursework, co-op experiences, and extracurricular involvement, I continue to develop the technical and professional skills needed to contribute to the electrical power industry.
+      </p>
+      <div class="hero-btns reveal-up delay-4">
+        <a href="#projects" class="btn-primary">View Projects →</a>
+        <a href="#reflections" class="btn-ghost">Read Reflections</a>
+      </div>
+      <div class="scroll-hint">SCROLL</div>
+    </section>
+
+    <!-- ===== ABOUT ME ===== -->
+    <section id="about">
+      <div class="section-label mono">01 — About Me</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>My Story</h2>
+          <p class="About Me">I am an Electrical Engineering student at York University with a strong interest in power systems, electrical infrastructure, and energy distribution. My academic experiences and co-op opportunities have helped me develop both technical and professional skills while exploring how engineering solutions impact communities and society.
+          I chose Electrical Engineering because I enjoy solving technical problems and understanding how complex systems operate. The electrical grid is one of the most important infrastructures in modern society, and I am particularly interested in how power is generated, transmitted, and distributed reliably and efficiently.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CAREER ===== -->
+
+    <!-- Education -->
+    <section id="education">
+      <div class="section-label mono">02 — Career · Education</div>
+      <h2>Education</h2>
+      <p class="section-sub York University">York University</p>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume">
+      <div class="section-label mono">02 — Career · Resume</div>
+      <h2>Resume</h2>
+      <p class="section-sub Resume">i will add my resume pdf here.</p>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="section-label mono">02 — Career · Experience</div>
+      <h2>Experience</h2>
+      <p class="section-sub Experience"> Distribution Investment Planning Co-op Student : Hydro One (May 2026 - August 2027) </p>
+      <p></p>
+    </section>
+
+    <!-- ===== DISCOVER MYSELF ===== -->
+
+    <!-- Dreams & Goals -->
+    <section id="dreams">
+      <div class="section-label mono">03 — Discover Myself · Dreams &amp; Goals</div>
+      <h2>Dreams &amp; Goals</h2>
+      <div class="goals-grid">
+        <div class="goal-item">
+          <span class="goal-num mono">LO 01</span>
+          <h3>Purpose &amp; Value of ePortfolios</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="goal-tag">Foundational</div>
+        </div>
+        <div class="goal-item">
+          <span class="goal-num mono">LO 02</span>
+          <h3>Portfolio Elements</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="goal-tag">Conceptual</div>
+        </div>
+        <div class="goal-item">
+          <span class="goal-num mono">LO 03</span>
+          <h3>COOP 2100 Orientation</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="goal-tag">Course-Specific</div>
+        </div>
+        <div class="goal-item">
+          <span class="goal-num mono">LO 04</span>
+          <h3>ePortfolio Shell</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="goal-tag">Applied</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests & Skills -->
+    <section id="interests">
+      <div class="section-label mono">03 — Discover Myself · Interests &amp; Skills</div>
+      <h2>Interests &amp; Skills</h2>
+      <p class="section-sub coming-soon">Coming soon...</p>
+
+      <div class="skills-grid">
+        <div class="skill-area">
+          <h3>Academic Skills</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Critical Thinking</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Research &amp; Analysis</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Written Communication</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Oral Presentation</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+          </ul>
+        </div>
+        <div class="skill-area">
+          <h3>Professional Skills</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Teamwork &amp; Collaboration</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Time Management</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Problem Solving</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Adaptability</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+          </ul>
+        </div>
+        <div class="skill-area">
+          <h3>Personal Strengths</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Self-Motivation</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Curiosity &amp; Learning</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Empathy</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Initiative</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values & Personality -->
+    <section id="values">
+      <div class="section-label mono">03 — Discover Myself · Values &amp; Personality</div>
+      <h2>Values &amp; Personality</h2>
+      <p class="section-sub coming-soon">Coming soon...</p>
+    </section>
+
+    <!-- ===== PROJECTS & CREDENTIALS ===== -->
+    <section id="projects">
+      <div class="section-label mono">04 — Projects &amp; Credentials</div>
+      <h2>Projects &amp; Credentials</h2>
+      <p class="section-sub">Artifacts will be added here throughout the course.</p>
+
+      <div class="artifact-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="academic">Academic</button>
+        <button class="filter-btn" data-filter="project">Projects</button>
+        <button class="filter-btn" data-filter="extracurricular">Extracurricular</button>
+      </div>
+
+      <div class="artifacts-grid">
+        <div class="artifact-card placeholder-card" data-category="academic">
+          <div class="artifact-header">
+            <span class="artifact-type mono">Academic</span>
+            <span class="artifact-date mono">——</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="artifact-tags"><span class="tag">——</span></div>
+          <div class="artifact-footer">
+            <span class="artifact-standard mono">Standard: ——</span>
+          </div>
+        </div>
+        <div class="artifact-card placeholder-card" data-category="project">
+          <div class="artifact-header">
+            <span class="artifact-type mono">Project</span>
+            <span class="artifact-date mono">——</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="artifact-tags"><span class="tag">——</span></div>
+          <div class="artifact-footer">
+            <span class="artifact-standard mono">Standard: ——</span>
+          </div>
+        </div>
+        <div class="artifact-card placeholder-card" data-category="extracurricular">
+          <div class="artifact-header">
+            <span class="artifact-type mono">Extracurricular</span>
+            <span class="artifact-date mono">——</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <p class="coming-soon">Coming soon...</p>
+          <div class="artifact-tags"><span class="tag">——</span></div>
+          <div class="artifact-footer">
+            <span class="artifact-standard mono">Standard: ——</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REFLECTIONS ===== -->
+    <section id="reflections">
+      <div class="section-label mono">05 — Reflections</div>
+      <h2>Looking Inward</h2>
+      <p class="section-sub">Reflections will be added here throughout the course.</p>
+
+      <div class="reflections-list">
+        <div class="reflection-item placeholder-reflection">
+          <div class="reflection-meta">
+            <span class="mono reflection-num">R.01</span>
+            <span class="reflection-date mono">Coming soon...</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <div class="reflection-body">
+            <p class="coming-soon">Coming soon...</p>
+          </div>
+        </div>
+        <div class="reflection-item placeholder-reflection">
+          <div class="reflection-meta">
+            <span class="mono reflection-num">R.02</span>
+            <span class="reflection-date mono">Coming soon...</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <div class="reflection-body">
+            <p class="coming-soon">Coming soon...</p>
+          </div>
+        </div>
+        <div class="reflection-item placeholder-reflection">
+          <div class="reflection-meta">
+            <span class="mono reflection-num">R.03</span>
+            <span class="reflection-date mono">Coming soon...</span>
+          </div>
+          <h3>Coming soon...</h3>
+          <div class="reflection-body">
+            <p class="coming-soon">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+<section id="career-content">
+<div class="section-label mono">Career Highlights</div>
+<h2>Education</h2>
+<p>Bachelor of Engineering (Electrical Engineering), York University. Relevant interests include power systems, transmission, substations, and energy infrastructure.</p>
+
+<h2>Experience</h2>
+<p><strong>Hydro One Engineering Co-op</strong> — Exposure to power system documentation, planning activities, technical communication, and professional engineering practices. Developed skills in information analysis, teamwork, and workplace communication.</p>
+
+<h2>Future Goals</h2>
+<ul>
+<li>Obtain P.Eng. designation in Ontario</li>
+<li>Pursue graduate studies in Electrical Engineering</li>
+<li>Research Hybrid Energy Storage Systems (HESS)</li>
+<li>Potentially pursue an MBA later in my career</li>
+</ul>
+
+<h2>SMART Goals</h2>
+<p><strong>Information Analysis:</strong> Improve my ability to evaluate technical documents by reviewing three engineering documents weekly and creating written summaries.</p>
+<p><strong>Communication:</strong> Strengthen technical communication through workplace interactions and industry reading.</p>
+<p><strong>Leadership & Collaboration:</strong> Learn from experienced planners, improve teamwork, and proactively suggest process improvements.</p>
+</section>
+
+</main>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-name mono">Adil Faizi ePortfolio · COOP 2100</p>
+      <p class="footer-credit">In progress · <span class="mono">2026–2026</span></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
