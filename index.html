@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adil Faizi, my ePortfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
+  <style>
+    /* Dropdown panel — overridden by main.css; kept for specificity fallback */
+    .dropdown-divider { height: 1px; background: rgba(255,174,86,0.1); margin: 4px 0; }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="nav-initials">AF</span>
+      <span class="nav-slash">/portfolio - Created with assisstance from Claude A.I</span>
+    </div>
+    <ul class="nav-links">
+
+      <li><a href="#home">Home</a></li>
+
+      <li><a href="#about">About Me</a></li>
+
+      <!-- Career dropdown -->
+      <li>
+        <button class="nav-parent">Career <span class="caret">▼</span></button>
+        <div class="dropdown">
+          <a href="#education">Education</a>
+          <a href="#resume">Resume</a>
+          <a href="#experience">Experience</a>
+          <a href="#community">Community</a>
+        </div>
+      </li>
+
+      <!-- Discover Myself dropdown -->
+      <li>
+        <button class="nav-parent">Discover Myself <span class="caret">▼</span></button>
+        <div class="dropdown">
+          <a href="#dreams">Dreams &amp; Goals</a>
+          <a href="#interests">Interests &amp; Skills</a>
+          <a href="#values">Values &amp; Personality</a>
+        </div>
+      </li>
+
+      <li><a href="#projects">Projects &amp; Credentials</a></li>
+      <li><a href="#reflections">Reflections</a></li>
+      <li><a href="#contact">Contact</a></li>
+    <button class="nav-menu-btn" id="menuToggle" aria-label="Menu">☰</button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="menuClose">✕</button>
+    <ul>
+      <li><a href="#home" class="mob-link">Home</a></li>
+      <li><a href="#about" class="mob-link">About Me</a></li>
+
+      <li class="mob-group">
+        <div class="mob-group-label">Career</div>
+        <a href="#education" class="mob-sub-link">Education</a>
+        <a href="#resume" class="mob-sub-link">Resume</a>
+        <a href="#experience" class="mob-sub-link">Experience</a>
+        <a href="#community" class="mob-sub-link">Community</a>
+      </li>
+
+      <li class="mob-group">
+        <div class="mob-group-label">Discover Myself</div>
+        <a href="#dreams" class="mob-sub-link">Dreams &amp; Goals</a>
+        <a href="#interests" class="mob-sub-link">Interests &amp; Skills</a>
+        <a href="#values" class="mob-sub-link">Values &amp; Personality</a>
+      </li>
+
+      <li><a href="#projects" class="mob-link">Projects &amp; Credentials</a></li>
+      <li><a href="#reflections" class="mob-link">Reflections</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO / HOME ===== -->
+    <section id="home">
+      <div class="hero-tag">
+        <span class="dot"></span> ePortfolio — COOP 2100 · Academic &amp; Professional Development
+      </div>
+      <h1 class="hero-name">
+        <span class="hero-first reveal-up">Adil</span>
+        <span class="hero-last reveal-up delay-1">Faizi</span>
+      </h1>
+      <p class="hero-roles reveal-up delay-2">
+        <span class="mono">&gt;</span> Electrical Engineering Student @ York University 
+      </p>
+      <p class="hero-bio reveal-up delay-3">
+        Welcome to my ePortfolio. This portfolio showcases my academic journey, professional experiences, technical projects, and personal development as an Electrical Engineering student at York University. Through co-op experience at Hydro One and ongoing coursework, I am developing the technical and professional competencies needed to contribute to the power industry — and to grow as a lifelong learner and future Professional Engineer.
+      </p>
+      <div class="hero-btns reveal-up delay-4">
+        <a href="#projects" class="btn-primary">View Projects →</a>
+        <a href="#reflections" class="btn-ghost">Read My Reflections</a>
+      </div>
+      <div class="scroll-hint">SCROLL</div>
+    </section>
+
+    <!-- ===== ABOUT ME ===== -->
+    <section id="about">
+      <div class="section-label mono">01 — About Me</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>My Story</h2>
+          <p>I am Adil Faizi, an Electrical Engineering student at the Lassonde School of Engineering, York University, with an expected graduation in 2028. My academic and professional interests are centred on power systems, electrical infrastructure, and energy distribution — fields that sit at the intersection of technical complexity and real-world societal impact.</p>
+          <p>I chose Electrical Engineering because I am drawn to solving technical problems and understanding how large-scale systems operate. The electrical grid is one of the most critical infrastructures in modern society, and I am particularly fascinated by how power is generated, transmitted, and distributed reliably and efficiently. Currently, I am gaining hands-on experience as a Distribution Investment Planning Co-op Student at Hydro One (May 2026 – August 2027), where I work with complex power systems documents and contribute to planning decisions that affect real communities.</p>
+          <p>Beyond technical skills, I am committed to growing as a communicator, collaborator, and lifelong learner. My long-term goal is to obtain my Professional Engineer (P.Eng.) designation in Ontario, pursue graduate studies in Electrical Engineering with a focus on power, and potentially contribute to research in Hybrid Energy Storage Systems (HESS).</p>
+          <div class="about-cards" style="margin-top:2rem;">
+            <div class="info-card">
+              
+              <h3>Program</h3>
+              <p>BEng Electrical Engineering<br>York University · Lassonde · Expected 2028</p>
+            </div>
+            <div class="info-card">
+              
+              <h3>Co-op Placement</h3>
+              <p>Distribution Investment Planning<br>Hydro One · May 2026 – Aug 2027</p>
+            </div>
+            <div class="info-card">
+              
+              <h3>Career Goal</h3>
+              <p>HESS Research ·-> P.Eng. (Ontario) ·-> MEng/MSc in Power Engineering · </p>
+            </div>
+            <div class="info-card">
+              
+              <h3>Contact</h3>
+              <p>Connect with me via LinkedIn or reach out professionally.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CAREER ===== -->
+
+    <!-- Education -->
+    <section id="education">
+      <div class="section-label mono">02 — Career · Education</div>
+      <h2>Education</h2>
+      <div class="edu-entry" style="margin-top:1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+          <div>
+            <h3 style="font-size:1.1rem; margin-bottom:0.25rem;">Bachelor of Engineering — Electrical Engineering</h3>
+            <p style="color:var(--accent2); font-family:'DM Mono',monospace; font-size:0.8rem; margin:0;">York University · Lassonde School of Engineering</p>
+          </div>
+          <span class="mono" style="color:var(--text-dim); font-size:0.75rem; white-space:nowrap;">2023 – Expected 2028</span>
+        </div>
+        <p style="color:var(--text-muted); font-size:0.95rem;">Pursuing a degree with a focus on power systems, electrical infrastructure, and energy distribution. Enrolled in the Co-operative Education program (COOP 2100) to complement academic learning with professional experience.</p>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume">
+      <div class="section-label mono">02 — Career · Resume</div>
+      <h2>Resume</h2>
+         <p class="section-sub">My current resume, will be updated to reflect my co-op placement at Hydro One.</p>
+   <a href="myResume.pdf" target="_blank" class="btn-primary" style="display:inline-block; margin-top:1rem;">
+     View Resume (PDF) →
+   </a>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="section-label mono">02 — Career · Experience</div>
+      <h2>Experience</h2>
+      <div class="edu-entry" style="margin-top:1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+          <div>
+            <h3 style="font-size:1.1rem; margin-bottom:0.25rem;">Distribution Investment Planning Co-op Student</h3>
+            <p style="color:var(--accent2); font-family:'DM Mono',monospace; font-size:0.8rem; margin:0;">Hydro One</p>
+          </div>
+          <span class="mono" style="color:var(--text-dim); font-size:0.75rem; white-space:nowrap;">May 2026 – August 2027</span>
+        </div>
+        <p style="color:var(--text-muted); font-size:0.95rem;">Working within the Distribution Investment Planning team to review and analyze power systems documents, support planning decisions for electrical infrastructure, and develop technical and professional skills in a real-world utility environment. Responsibilities include interpreting complex engineering documents, collaborating with senior planners, and contributing to process improvement initiatives.</p>
+        <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.4rem;">
+          <span class="tag">Power Systems</span>
+          <span class="tag">Infrastructure Planning</span>
+          <span class="tag">Technical Analysis</span>
+          <span class="tag">Collaboration</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DISCOVER MYSELF ===== -->
+
+    <!-- Dreams & Goals -->
+    <section id="dreams">
+      <div class="section-label mono">03 — Discover Myself · Dreams &amp; Goals</div>
+      <h2>Dreams &amp; Goals</h2>
+      <p class="section-sub">My SMART Goals are organized around three core competencies identified through self-assessment. Each goal is tied to my co-op experience at Hydro One and my broader professional development as an engineering student.</p>
+
+      <!-- Competency 1 -->
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:1.15rem; color:var(--accent2); margin-bottom:0.5rem;">Competency 1 — Accessing and Analyzing Information</h3>
+        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">Through my SWOT Analysis self-assessment, I identified a significant gap in my ability to evaluate and extract information effectively. In my co-op placement, I encounter complex power systems documents that require both theoretical and technical understanding — and errors have real consequences. Beyond the workplace, strong information literacy is a skill I want to prioritize as a developing professional engineer and lifelong learner.</p>
+        <div class="goals-grid">
+          <div class="goal-item">
+            <span class="goal-num mono">SMART 01</span>
+            <h3>Credibility &amp; Attentive Reading</h3>
+            <p>Improve my ability to distinguish credible information from misinformation by practising attentive reading on three technical documents per week during this co-op, tracking comprehension through written summaries after each document.</p>
+            <div style="margin-top:0.75rem; font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--accent3);">🗓 Target: December 2026</div>
+            <div class="goal-tag">Information Literacy</div>
+          </div>
+          <div class="goal-item">
+            <span class="goal-num mono">SMART 02</span>
+            <h3>Extracting Key Information</h3>
+            <p>Develop the ability to extract key information from complex documents by applying structured note-taking to all assigned co-op documents and reviewing those notes weekly to reinforce retention.</p>
+            <div style="margin-top:0.75rem; font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--accent3);">🗓 Target: December 2026</div>
+            <div class="goal-tag">Technical Comprehension</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Competency 2 -->
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:1.15rem; color:var(--accent2); margin-bottom:0.5rem;">Competency 2 — Communication Skills</h3>
+        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">My SWOT Analysis included communication as a weakness, and entering a professional environment reinforced this. I have noticed how relying on informal language limits how I structure my thoughts. These goals build directly on Competency 1 — once I can access and analyze information, the next step is to communicate it professionally and clearly.</p>
+        <div class="goals-grid">
+          <div class="goal-item">
+            <span class="goal-num mono">SMART 03</span>
+            <h3>Oral Communication</h3>
+            <p>Improve oral communication by actively reviewing how I respond to technical and non-technical questions at work each week, identifying at least one area for improvement, and adjusting my language and structure in subsequent conversations.</p>
+            <div style="margin-top:0.75rem; font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--accent3);">🗓 Target: December 2026</div>
+            <div class="goal-tag">Professional Communication</div>
+          </div>
+          <div class="goal-item">
+            <span class="goal-num mono">SMART 04</span>
+            <h3>Vocabulary &amp; Technical Terminology</h3>
+            <p>Expand my vocabulary by reading an industry-relevant article or engineering publication (e.g., IEEE) bi-weekly and incorporating new terminology into my spoken and written communication.</p>
+            <div style="margin-top:0.75rem; font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--accent3);">🗓 Target: December 2026</div>
+            <div class="goal-tag">Technical Writing</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Competency 3 -->
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:1.15rem; color:var(--accent2); margin-bottom:0.5rem;">Competency 3 — Collaboration &amp; Leadership</h3>
+        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">As an engineering student, I know that technical skills alone are not sufficient. Being able to work with others and take initiative creates opportunities and relationships that cannot be found any other way. My co-op provides an environment where I can explore many areas of the power industry and build real connections with professionals.</p>
+        <div class="goals-grid">
+          <div class="goal-item">
+            <span class="goal-num mono">SMART 05</span>
+            <h3>Strengthening Collaboration</h3>
+            <p>Strengthen collaboration skills by speaking to my planners about plans of action for specific tasks and understanding the thought process behind certain steps, building my ability to work effectively within a professional team.</p>
+            <div style="margin-top:0.75rem; font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--accent3);">🗓 Target: May 2027</div>
+            <div class="goal-tag">Teamwork</div>
+          </div>
+          <div class="goal-item">
+            <span class="goal-num mono">SMART 06</span>
+            <h3>Taking Initiative</h3>
+            <p>Take initiative by proposing improvement processes or solutions to workplace inefficiencies encountered during my co-op term, documenting them, and sharing them with my senior planner — reflecting my growth as a proactive co-op student.</p>
+            <div style="margin-top:0.75rem; font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--accent3);">🗓 Target: May 2027</div>
+            <div class="goal-tag">Leadership</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Future Goals -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:var(--radius-lg); padding:2rem; margin-top:1rem;">
+        <h3 style="font-size:1.1rem; margin-bottom:1rem;">Long-Term Career Goals</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem;">
+          <li style="display:flex; gap:0.75rem; align-items:flex-start; color:var(--text-muted); font-size:0.9rem;"><span style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem; margin-top:0.15rem;">→</span> Obtain P.Eng. — Professional Engineer designation (Ontario)</li>
+          <li style="display:flex; gap:0.75rem; align-items:flex-start; color:var(--text-muted); font-size:0.9rem;"><span style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem; margin-top:0.15rem;">→</span> Continue to Graduate Studies — MEng or MSc in Electrical Engineering (Power focus)</li>
+          <li style="display:flex; gap:0.75rem; align-items:flex-start; color:var(--text-muted); font-size:0.9rem;"><span style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem; margin-top:0.15rem;">→</span> Research Hybrid Energy Storage Systems (HESS) during undergraduate studies</li>
+          <li style="display:flex; gap:0.75rem; align-items:flex-start; color:var(--text-muted); font-size:0.9rem;"><span style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem; margin-top:0.15rem;">→</span> Potentially pursue an MBA degree to combine engineering expertise with business leadership</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Interests & Skills -->
+    <section id="interests">
+      <div class="section-label mono">03 — Discover Myself · Interests &amp; Skills</div>
+      <h2>Interests &amp; Skills</h2>
+      <p class="section-sub coming-soon"> <bold>Skills </bold>: 
+        <br> Programming: MATLAB, Python, C, Java, Bash, Arduino 
+        <br> CAD & Circuit  Design: AutoCAD, Revit, KiCad, ETAP
+        <br>Analysis & Simulation: LTspice, MATLAB
+        <br> Productivity: Microsoft Excel, Word, PowerPoint  </p>
+
+      <div class="skills-grid">
+        <div class="skill-area">
+          <h3>Academic Skills</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Critical Thinking</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Research &amp; Analysis</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Written Communication</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Oral Presentation</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+          </ul>
+        </div>
+        <div class="skill-area">
+          <h3>Professional Skills</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Teamwork &amp; Collaboration</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Time Management</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Problem Solving</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Adaptability</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+          </ul>
+        </div>
+        <div class="skill-area">
+          <h3>Personal Strengths</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Self-Motivation</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Curiosity &amp; Learning</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Empathy</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+            <li><span class="skill-name">Initiative</span><div class="skill-bar"><div class="skill-fill" style="--pct: 0%"></div></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values & Personality -->
+    <section id="values">
+      <div class="section-label mono">03 — Discover Myself · Values &amp; Personality</div>
+      <h2>Values &amp; Personality</h2>
+      <p class="section-sub">Understanding who I am beyond my technical skills — the values that guide my decisions and the personality traits that shape how I work and grow.</p>
+
+      <!-- Core Values -->
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:1.1rem; color:var(--accent2); margin-bottom:1.5rem;">Core Values</h3>
+        <div class="goals-grid">
+          <div class="goal-item">
+            <span class="goal-num mono">VALUE 01</span>
+            <h3>Integrity</h3>
+            <p>I believe in being honest and transparent in everything I do — whether it is acknowledging a gap in my knowledge, owning a mistake at work, or producing work I am genuinely proud of. In engineering, where errors carry real consequences, integrity is not optional.</p>
+          </div>
+          <div class="goal-item">
+            <span class="goal-num mono">VALUE 02</span>
+            <h3>Continuous Growth</h3>
+            <p>I am driven by a lifelong commitment to learning. From expanding my technical vocabulary through IEEE publications, to reflecting on my communication gaps, I actively seek out opportunities to become a more capable and self-aware professional.</p>
+          </div>
+          <div class="goal-item">
+            <span class="goal-num mono">VALUE 03</span>
+            <h3>Responsibility</h3>
+            <p>Working in power systems means that the work I do affects real communities. I take that seriously. I value thoroughness, attention to detail, and a sense of accountability for the quality and accuracy of my contributions.</p>
+          </div>
+          <div class="goal-item">
+            <span class="goal-num mono">VALUE 04</span>
+            <h3>Collaboration</h3>
+            <p>I believe the best outcomes come from working with people, not just alongside them. I value open communication, asking questions, and understanding the reasoning behind decisions — especially from those with more experience than me.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personality -->
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:1.1rem; color:var(--accent2); margin-bottom:1rem;">Personality &amp; Working Style</h3>
+        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem; max-width:680px;">Through self-assessment and reflection on my experiences in both academic and professional environments, I have come to understand how I tend to think, work, and engage with challenges.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem;">
+            <p style="font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--orange); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">How I think</p>
+            <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7;">I am an analytical thinker who enjoys breaking down complex systems into understandable parts. I naturally ask "why" before "how," which helps me build deeper understanding rather than surface-level familiarity.</p>
+          </div>
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem;">
+            <p style="font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--orange); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">How I work</p>
+            <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7;">I am methodical and detail-oriented, particularly when handling technical documents or tasks where precision matters. I prefer to fully understand the scope of a task before beginning, and I follow through on commitments.</p>
+          </div>
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem;">
+            <p style="font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--orange); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">How I communicate</p>
+            <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7;">I am working on becoming a stronger communicator — particularly in professional settings. I am most confident in written communication, and I am actively building my ability to express technical concepts clearly in conversations.</p>
+          </div>
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem;">
+            <p style="font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--orange); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">How I grow</p>
+            <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7;">I take self-assessment seriously. My SWOT Analysis revealed genuine areas for growth — information literacy, communication, and collaboration — and I have built concrete SMART Goals around each one. I treat feedback as a resource, not a criticism.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EQ Note -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--amber); border-radius:var(--radius-lg); padding:2rem;">
+        <p style="font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--amber); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">EQ Reflection — Coming Soon</p>
+        <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7;">Will Update</p>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS & CREDENTIALS ===== -->
+    <section id="projects">
+      <div class="section-label mono">04 — Projects &amp; Credentials</div>
+      <h2>Projects &amp; Credentials</h2>
+      <p class="section-sub">A selection of academic work and engineering projects that demonstrate my technical skills and growth as an Electrical Engineering student.</p>
+
+      <div class="artifact-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="academic">Academic</button>
+        <button class="filter-btn" data-filter="project">Projects</button>
+      </div>
+
+      <div class="artifacts-grid">
+
+        <!-- Why Me? Video — COOP 2001 -->
+        <div class="artifact-card" data-category="academic">
+          <span class="featured-badge">COOP 2001</span>
+          <div class="artifact-header">
+            <span class="artifact-type mono">Academic · Video</span>
+            <span class="artifact-date mono">2025</span>
+          </div>
+          <h3>Why Me? — Professional Introduction Video</h3>
+          <p>A professional self-introduction video produced for COOP 2001, communicating my background, engineering interests, and career goals to a professional audience.</p>
+          <div class="artifact-tags">
+            <span class="tag">Communication Skills</span>
+            <span class="tag">Professionalism</span>
+            <span class="tag">COOP 2001</span>
+          </div>
+
+          <!-- Video embed placeholder -->
+          <div class="video-placeholder">
+            
+            <video controls style="width:100%; border-radius:12px; margin-top:1rem;">
+              <source src="coop2001-Whyme_.mp4" type="video/mp4">
+  Y               
+              </video>
+          </div>
+
+          <div class="artifact-footer" style="margin-top:1rem;">
+            <span class="artifact-standard mono">Competency: Communication Skills</span>
+          </div>
+        </div>
+
+        <!-- DSP Filter Design -->
+        <div class="artifact-card" data-category="academic">
+          <div class="artifact-header">
+            <span class="artifact-type mono">Academic · MATLAB</span>
+            <span class="artifact-date mono">2025</span>
+          </div>
+          <h3>DSP Filter Design &amp; Audio Restoration</h3>
+          <p>Implemented a complete digital signal processing workflow — designing a bandpass FIR filter using windowing and Parks–McClellan methods, then applying both time-domain filtering and frequency-domain FFT suppression to restore a noisy music signal in MATLAB.</p>
+          <div class="artifact-tags">
+            <span class="tag">MATLAB</span>
+            <span class="tag">Signal Processing</span>
+            <span class="tag">FIR Filter</span>
+            <span class="tag">Audio Engineering</span>
+          </div>
+          <div class="artifact-footer">
+            <span class="artifact-standard mono">Competency: Engineering Tools</span>
+            <a href="https://github.com/AdilFaizi/DSP-Filter-Design-and-Audio-Restoration-Project-" target="_blank" rel="noopener" class="artifact-link">View on GitHub →</a>
+          </div>
+        </div>
+
+        <!-- ePortfolio Website -->
+        <div class="artifact-card" data-category="project">
+          <div class="artifact-header">
+            <span class="artifact-type mono">Project · Web</span>
+            <span class="artifact-date mono">2026</span>
+          </div>
+          <h3>Personal ePortfolio Website</h3>
+          <p>Designed and built this ePortfolio from scratch using HTML, CSS, and JavaScript — including a custom circuit-grid canvas animation, responsive layout, animated navigation, and warm engineering terminal aesthetic.</p>
+          <div class="artifact-tags">
+            <span class="tag">HTML / CSS / JS</span>
+            <span class="tag">Web Design</span>
+            <span class="tag">COOP 2100</span>
+          </div>
+          <div class="artifact-footer">
+            <span class="artifact-standard mono">Competency: Communication Skills</span>
+            <a href="https://github.com/AdilFaizi/mohammadadilfaizi.github.io" target="_blank" rel="noopener" class="artifact-link">View on GitHub →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== REFLECTIONS ===== -->
+    <section id="reflections">
+      <div class="section-label mono">05 — Reflections</div>
+      <h2>Looking Inward</h2>
+      <p class="section-sub">Reflections will be added here throughout the course.</p>
+
+      <div class="reflections-list">
+        <div class="reflection-item placeholder-reflection">
+          <div class="reflection-meta">
+            <span class="mono reflection-num">R.01</span>
+            <span class="reflection-date mono">Date: </span>
+          </div>
+          <h3>Reflection on SMART Goals &amp; Self-Assessment</h3>
+          <div class="reflection-body">
+            <p><strong style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem;">RETELL</strong> — This reflection will describe the process of completing my SWOT Analysis and identifying three core competency gaps: information literacy, communication, and collaboration.</p>
+            <p><strong style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem;">RELATE</strong> — This connects to the COOP 2100 framework for professional self-assessment and the Lassonde competencies of Life-Long Learning and Communication Skills.</p>
+            <p><strong style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem;">REFLECT</strong> — Full reflection to be added...</p>
+          </div>
+          <div class="reflection-tags">
+            <span class="tag">Life-Long Learning</span>
+            <span class="tag">Communication Skills</span>
+            <span class="tag">Professionalism</span>
+          </div>
+        </div>
+        <div class="reflection-item placeholder-reflection">
+          <div class="reflection-meta">
+            <span class="mono reflection-num">R.02</span>
+            <span class="reflection-date mono">Date: </span>
+          </div>
+          <h3>Reflection on Co-op Experience — Hydro One</h3>
+          <div class="reflection-body">
+            <p><strong style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem;">RETELL</strong> — This reflection will describe my first weeks as a Distribution Investment Planning Co-op Student at Hydro One, including the types of documents and tasks I encountered.</p>
+            <p><strong style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem;">RELATE</strong> — This connects to the Lassonde competencies of Knowledge Base for Engineering, Individual and Teamwork, and Problem Analysis.</p>
+            <p><strong style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem;">REFLECT</strong> — Full reflection to be added...</p>
+          </div>
+          <div class="reflection-tags">
+            <span class="tag">Knowledge Base for Engineering</span>
+            <span class="tag">Individual and Teamwork</span>
+            <span class="tag">Problem Analysis</span>
+          </div>
+        </div>
+        <div class="reflection-item placeholder-reflection">
+          <div class="reflection-meta">
+            <span class="mono reflection-num">R.03</span>
+            <span class="reflection-date mono">Date: </span>
+          </div>
+          <h3>Reflection on Communication &amp; Professional Growth</h3>
+          <div class="reflection-body">
+            <p><strong style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem;">RETELL</strong> — This reflection will document specific moments where I identified communication gaps and how I worked to address them in a professional environment.</p>
+            <p><strong style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem;">RELATE</strong> — This connects to the Lassonde competencies of Communication Skills and Professionalism.</p>
+            <p><strong style="color:var(--accent); font-family:'DM Mono',monospace; font-size:0.75rem;">REFLECT</strong> — Full reflection to be added...</p>
+          </div>
+          <div class="reflection-tags">
+            <span class="tag">Communication Skills</span>
+            <span class="tag">Professionalism</span>
+            <span class="tag">Life-Long Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <div class="section-label mono">06 — Get In Touch</div>
+      <h2>Let's Connect</h2>
+      <p class="section-sub">Whether you're a recruiter, fellow student, or professional in the power industry — feel free to reach out.</p>
+
+      <div class="contact-grid">
+
+        <!-- Email -->
+        <a href="mailto:adilf@my.yorku.ca" class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div class="contact-card-text">
+            <span class="contact-card-label mono">Email</span>
+            <span class="contact-card-value">adilf@my.yorku.ca</span>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/adilfaizi/" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="contact-card-text">
+            <span class="contact-card-label mono">LinkedIn</span>
+            <span class="contact-card-value">https://www.linkedin.com/in/adilfaizi/</span>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <!-- GitHub (optional) -->
+        <a href="https://github.com/AdilFaizi" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </div>
+          <div class="contact-card-text">
+            <span class="contact-card-label mono">GitHub</span>
+            <span class="contact-card-value">github.com/AdilFaizi</span>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <!-- York University -->
+        <a href="https://lassonde.yorku.ca" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="contact-card-text">
+            <span class="contact-card-label mono">Institution</span>
+            <span class="contact-card-value">Lassonde School of Engineering, York University</span>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-name mono">Adil Faizi · ePortfolio · COOP 2100 · Lassonde School of Engineering, York University</p>
+      <p class="footer-credit mono">Last updated: <span class="mono">June 2026</span> &nbsp;|&nbsp; <a href="mailto:adilf@my.yorku.ca" style="color:var(--accent2); text-decoration:none;">adilf@my.yorku.ca</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>.
+</html>
