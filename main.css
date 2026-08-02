@@ -830,6 +830,7 @@ section > h2 {
   opacity: 0;
   transition: opacity 0.25s;
 }
+
 .contact-card:hover {
   border-color: var(--border2);
   transform: translateY(-3px);
